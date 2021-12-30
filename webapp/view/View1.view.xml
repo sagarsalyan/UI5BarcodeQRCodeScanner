@@ -1,0 +1,30 @@
+<mvc:View controllerName="app.BarCode.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:ndc="sap.ndc">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox>
+							<HBox>
+								<Title text="Using UI5"/>
+								<ndc:BarcodeScannerButton id="sampleBarcodeScannerButton" scanSuccess="onScanSuccess" scanFail="onScanError"
+									inputLiveUpdate="onScanLiveupdate" dialogTitle="Barcode Scanner Button Sample"/>
+								<Button press="onScanUI5" text="Scan using button"/>
+							</HBox>
+							<HBox>
+								<Title text="Using Zxing and 'ExtScanner' Custom control"/>
+								<Input value="{/scannedValue}"/>
+								<Button text="Scan it!" press="onScan"/>
+							</HBox>
+							<HBox>
+								<Title text="Using Zxing"/>
+								<Input value="{/scannedValue2}"/>
+								<Button text="Scan it!" press="onScan2"/>
+							</HBox>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
