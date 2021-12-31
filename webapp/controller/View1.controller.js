@@ -32,6 +32,16 @@ sap.ui.define([
 				}
 			);
 		},
+		onScanUI52: function (oEvent) {
+			app.BarCode.controls.BarcodeScanner.BarcodeScanner.scan(
+				function (oSuccess) {
+
+				},
+				function (oError) {
+
+				}
+			);
+		},
 		onScanned: function (oEvent) {
 			this.oMainModel.setProperty('/scannedValue', oEvent.getParameter('value'));
 		},
