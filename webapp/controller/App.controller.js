@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, BarcodeScanner, ExtScanner) {
 	"use strict";
 
-	return Controller.extend("app.BarCode.controller.View1", {
+	return Controller.extend("app.BarCode.controller.App", {
 		onInit: function () {
 			// Zxing
 			this.oScanner = new ExtScanner({
